@@ -1,0 +1,20 @@
+import {
+    name$, // $ indicate is observable, not compulsary to put $ just for developer understanding
+    storeDataOnServer,
+    storeDataOnServerError
+} from './external';
+
+// By calling subscribe, we made name$ Observable run its code and possibly emit some values.
+// We need to call the subscribe method on them to execute them.
+name$.subscribe(value => console.log(value));
+
+// We can also use Observables to send HTTP requests to a server for storing data.
+// the Observables can also be used for asynchronous sources.
+storeDataOnServer('some data').subscribe(value => console.log(value))
+
+
+// for error handling
+storeDataOnServerError('some data').subscribe({
+    next: value => console.log(value),
+    error: err => console.log(err)
+})

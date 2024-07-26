@@ -1,0 +1,15 @@
+RSJS: RXJS is javascript library
+Stands for Reactive Extension for javascript
+
+- Think of RXJS as lodash for event
+- RXJS main purpose is to conveniently handle asynchronous code and RxJS provides lots of tools to do so.
+
+Observables:
+- Observables are like functions, which generate some values once we subscribe to them.
+- The Observables are like data or event generators with some logic stored inside.
+- The data that they generate can have various sources, like an array of values, DOM events, HTTP requests, timers, anything you want can be converted into an Observable.
+
+Subscriber:
+- To run the code placed inside of an Observable, we need to subscribe to it.
+- you'll want to consume the data emitted by an Observable and provide some logic to run for each emitted value, And if something goes wrong, you can provide some error handling logic.
+
